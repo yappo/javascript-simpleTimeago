@@ -97,7 +97,7 @@
 		o.seconds = function(c, d, date) {
 			if (d.seconds < 5) {
 				return "just now";
-			} else if (d.seconds > 30) {
+			} else if (d.seconds < 30) {
 				return "a few seconds ago";
 			}
 			return d.seconds + " seconds ago";
