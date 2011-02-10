@@ -154,8 +154,6 @@
 		o.seconds = function(c, d, date) {
 			if (d.seconds < 5) {
 				return "たった今";
-			} else if (d.seconds > 30) {
-				return "さっき";
 			}
 			return d.seconds + "秒前";
 		};
