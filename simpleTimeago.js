@@ -77,7 +77,10 @@
 
 		o.getTime = function(date) {
 			var hour = date.getHours();
-			if (hour < 12) {
+			if (hour === 0) {
+				hour = 24;
+			}
+			if (hour < 13) {
 				return hour + ":" + date.getMinutes() + "am";
 			} else {
 				return (hour - 12) + ":" + date.getMinutes() + "pm";
