@@ -1,4 +1,4 @@
-<?html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -18,16 +18,7 @@ window.addEventListener("load", function(){
 
     document.getElementById("result_en").innerHTML = en.join("<br />");
     document.getElementById("result_ja").innerHTML = ja.join("<br />");
-return;
-
-    var epoch;
-
-    epoch = document.getElementById("result_en").innerHTML;
-    document.getElementById("result_en").innerHTML = simpleTimeago(epoch);
-
-    epoch = document.getElementById("result_ja").innerHTML;
-    document.getElementById("result_ja").innerHTML = simpleTimeago(epoch, "ja");
-});
+}, false);
     </script>
   </head>
   <body>
