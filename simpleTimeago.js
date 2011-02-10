@@ -80,10 +80,14 @@
 			if (hour === 0) {
 				hour = 24;
 			}
+			var minutes = date.getMinutes();
+			if (minutes < 10) {
+				minutes = "0" + minutes;
+			}
 			if (hour < 13) {
-				return hour + ":" + date.getMinutes() + "am";
+				return hour + ":" + minutes + "am";
 			} else {
-				return (hour - 12) + ":" + date.getMinutes() + "pm";
+				return (hour - 12) + ":" + minutes + "pm";
 			}
 		};
 
@@ -143,7 +147,11 @@
 
 		o.getTime = function(date) {
 			var hour = date.getHours();
-			return hour + "時" + date.getMinutes() + "分";
+			var minutes = date.getMinutes();
+			if (minutes < 10) {
+				minutes = "0" + minutes;
+			}
+			return hour + "時" + minutes + "分";
 		};
 
 		o.monthNames = [];
